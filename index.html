@@ -2,269 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Uttam Bairwa | Professional Cameraman</title>
 
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2920/2920244.png">
+
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif;}
+body{background:#f4f6f8;color:#222;}
 
-body{
-    background:#0b0b0b;
-    color:white;
-    line-height:1.6;
+header{
+ position:fixed;top:0;left:0;width:100%;height:70px;
+ background:white;display:flex;align-items:center;
+ padding:0 20px;box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000;
 }
+.menu-btn{font-size:30px;cursor:pointer;margin-right:20px;}
+.logo{font-size:22px;font-weight:700;}
 
-/* HERO */
+.side-menu{
+ position:fixed;top:70px;left:-260px;width:260px;height:100%;
+ background:#111;transition:.4s;z-index:999;
+}
+.side-menu a{
+ display:block;padding:16px 20px;color:#fff;
+ text-decoration:none;border-bottom:1px solid #333;
+}
+.side-menu a:hover{background:#e91e63;}
+
+section{display:none;padding:120px 40px;min-height:100vh;}
+section.active{display:block}
+
+/* HOME */
+#home{
+ display:block;
+ background:linear-gradient(to right,#ffffff,#fde7ef);
+}
 .hero{
-    height:100vh;
-    background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+ display:flex;gap:40px;align-items:center;flex-wrap:wrap;
 }
-.hero-overlay{
-    background:rgba(0,0,0,0.65);
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-.hero-overlay h1{
-    font-size:64px;
-    letter-spacing:4px;
-}
-.hero-overlay p{
-    font-size:22px;
-    opacity:.85;
-}
-.btn{
-    margin-top:25px;
-    padding:14px 40px;
-    border:2px solid white;
-    color:white;
-    text-decoration:none;
-    transition:.3s;
-}
-.btn:hover{
-    background:white;
-    color:black;
-}
-
-/* SECTION */
-section{
-    padding:90px 8%;
-}
-.section-title{
-    text-align:center;
-    font-size:44px;
-    margin-bottom:50px;
-}
-
-/* ABOUT */
-.about p{
-    max-width:900px;
-    margin:auto;
-    font-size:19px;
-    opacity:.85;
-    text-align:center;
+.hero-text{flex:1}
+.hero-text h1{font-size:44px;margin-bottom:20px}
+.hero-text p{font-size:18px;line-height:1.7}
+.hero-img{flex:1}
+.hero-img img{
+ width:100%;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2)
 }
 
 /* SERVICES */
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
+.service-box{
+ background:#fff;border-radius:18px;margin-bottom:40px;
+ padding:20px;display:flex;gap:25px;
+ box-shadow:0 8px 20px rgba(0,0,0,.1)
 }
+.service-box img{
+ width:300px;height:200px;object-fit:cover;border-radius:15px
+}
+.service-info{flex:1}
+.service-info h2{margin-bottom:10px}
+.price{font-size:20px;font-weight:700;color:#e91e63}
 
-.service-card{
-    background:#111;
-    padding:30px;
-    border-radius:18px;
-    font-size:20px;
-    cursor:pointer;
-    text-align:center;
-    transition:.3s;
-}
-.service-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(255,255,255,.15);
-}
-
-/* SERVICE DETAIL */
-.service-detail{
-    max-width:900px;
-    margin:40px auto 0;
-    background:#111;
-    border-radius:20px;
-    display:none;
-    animation:slide .4s ease;
-}
-.service-detail-content{
-    padding:35px;
-}
-.service-detail-content h3{
-    font-size:26px;
-    margin-bottom:15px;
-}
-.price{
-    margin-top:15px;
-    color:#ffd700;
-    font-weight:bold;
-}
-
-@keyframes slide{
-    from{opacity:0; transform:translateY(-10px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-/* GALLERY */
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-}
-.gallery-grid img{
-    width:100%;
-    border-radius:18px;
-    transition:.4s;
-}
-.gallery-grid img:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 30px rgba(255,255,255,.3);
+/* ADDRESS */
+.map{
+ width:100%;height:420px;border-radius:20px;border:none;
+ box-shadow:0 8px 20px rgba(0,0,0,.1);margin-bottom:30px
 }
 
 /* CONTACT */
-.contact{
-    background:#111;
-    text-align:center;
+.contact-box{
+ background:#fff;padding:30px;border-radius:20px;
+ box-shadow:0 8px 20px rgba(0,0,0,.1);max-width:520px
 }
-.contact p{
-    font-size:18px;
-    margin:10px 0;
+.contact-box a{
+ display:block;margin:15px 0;padding:15px;
+ background:#e91e63;color:white;text-align:center;
+ border-radius:12px;text-decoration:none;font-size:18px
 }
+.contact-box a:hover{background:#c2185b}
 
-/* FOOTER */
-footer{
-    background:black;
-    padding:20px;
-    text-align:center;
-    opacity:.7;
+@media(max-width:768px){
+ .hero{flex-direction:column}
+ .service-box{flex-direction:column}
+ .service-box img{width:100%;height:220px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-overlay">
-        <h1>UTTAM BAIRWA</h1>
-        <p>Professional Cameraman • Filmmaker • Photographer</p>
-        <a href="#services" class="btn">View Services</a>
-    </div>
+<header>
+ <div class="menu-btn" onclick="toggleMenu()">☰</div>
+ <div class="logo">Uttam Bairwa</div>
+</header>
+
+<div class="side-menu" id="menu">
+ <a onclick="openSection('home')">Home</a>
+ <a onclick="openSection('services')">Services & Charges</a>
+ <a onclick="openSection('address')">Address</a>
+ <a onclick="openSection('contact')">Contact</a>
 </div>
 
-<!-- ABOUT -->
-<section class="about">
-    <h2 class="section-title">About Me</h2>
-    <p>
-        I am <b>Uttam Bairwa</b>, an 18-year-old professional cameraman from
-        <b>Bhilwara, Rajasthan</b>.  
-        I create cinematic wedding films, music videos, and professional shoots
-        that capture emotions and tell real stories.
-    </p>
+<!-- HOME -->
+<section id="home" class="active">
+ <div class="hero">
+  <div class="hero-text">
+   <h1>Professional Cameraman</h1>
+   <p>
+    Wedding • Cinematic Films • Songs • Outdoor Shoots<br><br>
+    Based in Bhilwara, Rajasthan
+   </p>
+  </div>
+  <div class="hero-img">
+   <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+  </div>
+ </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-    <h2 class="section-title">My Services</h2>
+ <div class="service-box">
+  <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+  <div class="service-info">
+   <h2>Wedding Shoot</h2>
+   <p>Complete cinematic wedding coverage with professional camera & drone shots.</p>
+   <div class="price">₹25,000+</div>
+  </div>
+ </div>
 
-    <div class="services-grid">
-        <div class="service-card" onclick="openService(1)">🎥 Wedding Shoot</div>
-        <div class="service-card" onclick="openService(2)">💍 Re-Wedding Cinematic Film</div>
-        <div class="service-card" onclick="openService(3)">🎶 Song Shooting / Music Video</div>
-        <div class="service-card" onclick="openService(4)">🎬 Film Shooting & Filming</div>
-        <div class="service-card" onclick="openService(5)">📸 Professional Photography</div>
-        <div class="service-card" onclick="openService(6)">🌄 Outdoor & Nature Shoots</div>
-    </div>
+ <div class="service-box">
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+  <div class="service-info">
+   <h2>Song / Music Video</h2>
+   <p>Creative storytelling music videos with color grading & cinematic feel.</p>
+   <div class="price">₹15,000+</div>
+  </div>
+ </div>
 
-    <div class="service-detail" id="serviceDetail">
-        <div class="service-detail-content" id="serviceContent"></div>
-    </div>
+ <div class="service-box">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+  <div class="service-info">
+   <h2>Outdoor / Nature Shoot</h2>
+   <p>Beautiful outdoor portraits & cinematic nature shoots.</p>
+   <div class="price">₹10,000+</div>
+  </div>
+ </div>
 </section>
 
-<!-- GALLERY -->
-<section>
-    <h2 class="section-title">My Work</h2>
-    <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
-        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e">
-        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728">
-        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
-        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
-        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7">
-    </div>
+<!-- ADDRESS -->
+<section id="address">
+ <iframe class="map"
+ src="https://maps.google.com/maps?q=Bhilwara&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+ <h2>Studio Address</h2>
+ <p>
+  Chandrashekhar Azad Nagar,<br>
+  Chittorgarh Road,<br>
+  Blue Bridge ke paas,<br>
+  Sanwariya Basti,<br>
+  Bhilwara, Rajasthan
+ </p>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>📍 Bhilwara, Rajasthan</p>
-    <p>📞 8000559485</p>
+<section id="contact">
+ <div class="contact-box">
+  <a href="tel:8000559485">📞 Call Now</a>
+  <a href="https://wa.me/918000559485">💬 WhatsApp</a>
+  <a href="mailto:uttamcameraman@gmail.com">📧 Email</a>
+ </div>
 </section>
 
-<footer>
-    © 2026 Uttam Bairwa | Cinematic Visuals
-</footer>
-
 <script>
-const data = {
-1:`<h3>🎥 Wedding Shoot</h3>
-✔ Full day coverage<br>
-✔ Cinematic & candid moments<br>
-✔ Highlight + full film<br>
-<div class="price">Starting Price: ₹25,000</div>`,
-
-2:`<h3>💍 Re-Wedding Cinematic Film</h3>
-✔ Story based cinematic shoot<br>
-✔ Romantic visuals & slow motion<br>
-✔ Professional color grading<br>
-<div class="price">Starting Price: ₹18,000</div>`,
-
-3:`<h3>🎶 Song Shooting / Music Video</h3>
-✔ Concept planning & direction<br>
-✔ Indoor + outdoor shoot<br>
-✔ Reel & YouTube ready<br>
-<div class="price">Starting Price: ₹15,000</div>`,
-
-4:`<h3>🎬 Film Shooting & Filming</h3>
-✔ Short films & scenes<br>
-✔ Professional camera angles<br>
-✔ Editing & grading<br>
-<div class="price">Starting Price: ₹20,000</div>`,
-
-5:`<h3>📸 Professional Photography</h3>
-✔ Wedding & events<br>
-✔ High quality edits<br>
-✔ Album ready photos<br>
-<div class="price">Starting Price: ₹8,000</div>`,
-
-6:`<h3>🌄 Outdoor & Nature Shoots</h3>
-✔ Sunrise & sunset shoots<br>
-✔ Creative cinematic angles<br>
-✔ Reel friendly output<br>
-<div class="price">Starting Price: ₹10,000</div>`
-};
-
-function openService(id){
-    const box = document.getElementById("serviceDetail");
-    const content = document.getElementById("serviceContent");
-    content.innerHTML = data[id];
-    box.style.display = "block";
-    box.scrollIntoView({behavior:"smooth"});
+function toggleMenu(){
+ let m=document.getElementById("menu");
+ m.style.left=(m.style.left==="0px")?"-260px":"0px";
+}
+function openSection(id){
+ document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+ document.getElementById("menu").style.left="-260px";
 }
 </script>
 
